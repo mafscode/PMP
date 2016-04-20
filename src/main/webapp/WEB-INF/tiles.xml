@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <!-- Master -->
+    <definition name="master.page" template="/public/template/master.jsp">
+        <put-attribute name="header" value="/public/template/header.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+        <put-list-attribute name="javascripts2">
+	        <add-attribute value="/resources/js/jquery-2.1.1.min.js" />
+	        <add-attribute value="/resources/js/bootstrap.min.js" />
+	        <add-attribute value="/resources/js/nifty.min.2.3.js" />
+	        <add-attribute value="/resources/js/maf-core.js" />
+	    </put-list-attribute>
+	    <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+	    </put-list-attribute>
+	    <put-list-attribute name="css">
+	    	<add-attribute value="/resources/css/bootstrap.min.css" />
+	    	<add-attribute value="/resources/css/bootstrap-table.min.css" />
+	    	<add-attribute value="/resources/css/nifty.min.2.3.css" />
+	    	<add-attribute value="/resources/css/animate.min.css" />
+	    	<add-attribute value="/resources/css/font-awesome.min.css" />
+	    	<add-attribute value="/resources/css/PMP.css" />
+	    </put-list-attribute>
+    </definition>
+    
+    <definition name="master-lite.page" template="/public/template/master-lite.jsp">
+        
+    </definition>
+
+	<definition name="welcomePage" extends="master.page">
+        <put-attribute name="body" value="/protected/welcomePage.jsp"/>
+    </definition>
+    
+	<!-- MasterLogin -->
+    <definition name="masterLogin.page" template="/public/template/masterLogin.jsp">
+    </definition>
+	<definition name="login" extends="masterLogin.page">
+        <put-attribute name="body" value="/public/login.jsp"/>
+    </definition>
+    <definition name="init" extends="masterLogin.page">
+        <put-attribute name="body" value="/public/init.jsp"/>
+    </definition>
+    <!-- MANTENEDORES -->
+    <definition name="administracionIndex" extends="master.page">
+        <put-attribute name="body" value="/protected/administracion/index.jsp"/>
+        <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+        	<add-attribute value="/resources/js/bootbox.js" />
+	        <add-attribute value="/resources/js/pages/administracion.js" />
+    	</put-list-attribute>
+    </definition>
+    <!-- MANTENEDOR USUARIOS -->
+    <definition name="usuariosList" extends="master.page">
+        <put-attribute name="body" value="/protected/administracion/usuario/usuariosList.jsp"/>
+    </definition>
+    <definition name="usuariosCrear" extends="master.page">
+        <put-attribute name="body" value="/protected/administracion/usuario/usuariosCrear.jsp"/>
+    </definition>
+    <!-- MANTENEDOR PAISES -->
+    <definition name="paisList" extends="master.page">
+        <put-attribute name="body" value="/protected/administracion/pais/list.jsp"/>
+        <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+        	<add-attribute value="/resources/js/bootbox.js" />
+	        <add-attribute value="/resources/js/pages/pais.js" />
+    	</put-list-attribute>
+    </definition>
+    <definition name="paisItem" extends="master-lite.page">
+        <put-attribute name="body" value="/protected/administracion/pais/item.jsp"/>
+    </definition>
+    <!-- MANTENEDOR FILIALES -->
+    <definition name="filialList" extends="master.page">
+        <put-attribute name="body" value="/protected/administracion/filial/list.jsp"/>
+        <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+        	<add-attribute value="/resources/js/bootbox.js" />
+	        <add-attribute value="/resources/js/pages/filial.js" />
+    	</put-list-attribute>
+    </definition>
+    <definition name="filialItem" extends="master-lite.page">
+        <put-attribute name="body" value="/protected/administracion/filial/item.jsp"/>
+    </definition>
+    <!-- MODULO DE ACTIVOS-->
+    <definition name="activoIndex" extends="master.page">
+        <put-attribute name="body" value="/protected/activo/index.jsp"/>
+        <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+        	<add-attribute value="/resources/js/bootbox.js" />
+	        <add-attribute value="/resources/js/pages/activo.js" />
+	        
+    	</put-list-attribute>
+    </definition>
+    <definition name="activoRegistroIndex" extends="master.page">
+        <put-attribute name="body" value="/protected/activo/registro/index.jsp"/>
+        <put-list-attribute name="javascripts">
+	        <add-attribute value="/resources/js/bootstrap-table.min.js" />
+        	<add-attribute value="/resources/js/bootbox.js" />
+	        <add-attribute value="/resources/js/bootstrap-typeahead.min.js" />
+	        <add-attribute value="/resources/js/jquery.bootstrap.wizard.min.js" />
+	        <add-attribute value="/resources/js/bootstrapValidator.min.js" />
+	        <add-attribute value="/resources/js/bootstrap-table-group-by.js" />
+	        <add-attribute value="/resources/js/pages/activoRegistro.js" />
+    	</put-list-attribute>
+    	<put-list-attribute name="css">
+	    	<add-attribute value="/resources/css/bootstrap.min.css" />
+	    	<add-attribute value="/resources/css/bootstrap-table.min.css" />
+	    	<add-attribute value="/resources/css/font-awesome.min.css" />
+	    	<add-attribute value="/resources/css/nifty.min.2.3.css" />
+	    	<add-attribute value="/resources/css/PMP.css" />
+	    	<add-attribute value="/resources/css/bootstrap-table-group-by.css" />
+	    </put-list-attribute>
+    </definition>
+    <definition name="activoRegistroProceso" extends="master-lite.page">
+        <put-attribute name="body" value="/protected/activo/registro/proceso.jsp"/>
+    </definition>
+    <definition name="activoRegistroSubProceso" extends="master-lite.page">
+        <put-attribute name="body" value="/protected/activo/registro/subproceso.jsp"/>
+    </definition>
+    <definition name="activoRegistroActivoInf" extends="master-lite.page">
+        <put-attribute name="body" value="/protected/activo/registro/activoInf.jsp"/>
+    </definition>
+</tiles-definitions>

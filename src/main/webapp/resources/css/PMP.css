@@ -1,0 +1,51 @@
+.bndr-container
+{
+	cursor:pointer;
+}
+.bndr-container:hover
+{
+	background-color:#b7dcfe;
+	
+}
+.bndr-container-selected
+{
+	border-width: 1px;
+	border-style: solid;
+    border-color:#2ea5cc;
+    background-color: rgba(0,0,0,0.025)
+}
+.modal-header 
+{
+	background-color: #2d3c4b;
+	
+}
+.modal-header .modal-title
+{
+	color:#ffffff;
+}
+.modal-body
+{
+	background-color: rgba(0,0,0,0.025)
+}
+.modal-header .bootbox-close-button
+{
+	color:rgba(0,0,0,0.025)
+}
+
+
+
+.modal-falso-footer {
+	padding:15px;
+	text-align:right;
+	border-top:1px solid #e5e5e5
+}
+.modal-falso-footer .btn+.btn {
+	margin-bottom:0;
+	margin-left:5px
+}
+.modal-falso-footer .btn-group .btn+.btn {
+	margin-left:-1px
+}
+.modal-falso-footer .btn-block+.btn-block {
+	margin-left:0
+}
